@@ -1,4 +1,4 @@
-module Walkycat.State {
+module WalkyCat.State {
   export class Preload extends Phaser.State {
     private preloadBar: Phaser.Sprite;
 

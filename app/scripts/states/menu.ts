@@ -1,4 +1,4 @@
-module Walkycat.State {
+module WalkyCat.State {
   export class Menu extends Phaser.State {
     background: Phaser.Sprite;
 

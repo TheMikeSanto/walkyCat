@@ -1,9 +1,9 @@
 /// <reference path="../vendor/phaser-official/typescript/phaser.d.ts"/>
 
-/// <reference path='State/Boot.ts'/>
-/// <reference path='State/Preload.ts'/>
-/// <reference path='State/Menu.ts'/>
-/// <reference path='State/Main.ts'/>
+/// <reference path='states/boot.ts'/>
+/// <reference path='states/preload.ts'/>
+/// <reference path='states/menu.ts'/>
+/// <reference path='states/main.ts'/>
 
 module WalkyCat {
   export class Game extends Phaser.Game {
