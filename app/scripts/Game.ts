@@ -5,10 +5,10 @@
 /// <reference path='State/Menu.ts'/>
 /// <reference path='State/Main.ts'/>
 
-module Walkycat {
+module WalkyCat {
   export class Game extends Phaser.Game {
     constructor() {
-      super(800, 600, Phaser.AUTO, 'game-div');
+      super(1280, 720, Phaser.AUTO, 'game-div');
 
       this.state.add('boot', State.Boot);
       this.state.add('preload', State.Preload);
@@ -21,5 +21,5 @@ module Walkycat {
 }
 
 window.onload = () => {
-  var game = new Walkycat.Game();
+  var game = new WalkyCat.Game();
 }
