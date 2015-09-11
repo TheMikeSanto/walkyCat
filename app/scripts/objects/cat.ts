@@ -4,34 +4,29 @@ module WalkyCat {
 	export class Cat extends Phaser.Sprite {
 		game: Phaser.Game;
 		playerState: PlayerState;
-
-		RIGHT_ARROW = Phaser.Key;
-		ESCAPE = Phaser.Key;
-
 		walkingSpeed: number;
 
 		public static MAX_SPEED: number = 30;
 
 		constructor(game: Phaser.Game, x: number, y: number) {
 			// Call Phaser.Sprite constructor
-			super(game, x, y, "catSprite", 0);
+			super(game, x, y, "cat-sprite", 0);
 
 			this.game = game;
-			this.walkingSpeed = 0;
-			console.log(typeof this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT));
-			// this.RIGHT_ARROW = this.game.input.keyboard.addKey(Phaser.Keyboard.RIGHT);
-			// this.RIGHT_ARROW.onDown.add(Player.prototype.moveRight, this);
+			this.walkingSpeed = 1;
 
 			this.anchor.set(0.0, 1.0);
-			this.startIdle();
+			this.startWalking();
 		}
 
-		moveRight() {
-			// Do something
+		update() {
+			this.x += this.walkingSpeed * (60 / this.game.time.elapsedMS);
 		}
 
-		startIdle() {
-			// Idle something
+		startWalking() {
+			this.animations.add('walk');
+			this.animations.currentAnim.speed = this.walkingSpeed;
+			this.animations.play('walk', this.walkingSpeed, true);
 		}
 	}
 }
