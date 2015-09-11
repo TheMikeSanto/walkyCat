@@ -1,6 +1,6 @@
 module WalkyCat.State {
   export class Main extends Phaser.State {
-  	player: WalkyCat.Player;
+  	cat: WalkyCat.Cat;
   	background: Phaser.Sprite;
   	lane1: WalkyCat.Lane;
   	lane2: WalkyCat.Lane;
@@ -18,7 +18,7 @@ module WalkyCat.State {
     	this.lane3 = new Lane(this.game, 0, 720);
     	this.game.add.existing(this.lane3);
 
-    	this.player = new Player(this.game, 25, 500);
+    	this.cat = new Cat(this.game, 25, 500);
     	this.game.add.existing(this.player);
     }
   }

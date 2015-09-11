@@ -1,7 +1,7 @@
 module WalkyCat {
 	export enum PlayerState { IDLE, WALKING }
 
-	export class Player extends Phaser.Sprite {
+	export class Cat extends Phaser.Sprite {
 		game: Phaser.Game;
 		playerState: PlayerState;
 

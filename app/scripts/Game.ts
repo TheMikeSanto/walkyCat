@@ -4,7 +4,7 @@
 /// <reference path='states/preload.ts'/>
 /// <reference path='states/menu.ts'/>
 /// <reference path='states/main.ts'/>
-/// <reference path='objects/player.ts'/>
+/// <reference path='objects/cat.ts'/>
 /// <reference path='objects/lane.ts'/>
 
 module WalkyCat {
