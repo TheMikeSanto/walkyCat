@@ -7,7 +7,7 @@ module WalkyCat.State {
   	lane3: WalkyCat.Lane;
 
     create() {
-    	this.background = this.add.sprite(0,0, 'sceneBG');
+    	this.background = this.add.sprite(0,0, 'scene-bg');
     	
     	this.lane1 = new Lane(this.game, 0, 400);
     	this.game.add.existing(this.lane1);
