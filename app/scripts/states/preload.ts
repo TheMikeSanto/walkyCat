@@ -1,17 +1,17 @@
 module WalkyCat.State {
   export class Preload extends Phaser.State {
-    private preloadBar: Phaser.Sprite;
+    private preloadCat: Phaser.Sprite;
+    background: Phaser.Sprite;
 
     preload() {
-      this.preloadBar = this.add.sprite(0, 148, 'preload-bar');
-      this.load.setPreloadSprite(this.preloadBar);
+      this.background = this.add.sprite(0,0, 'blue-bg');
+      this.preloadCat = this.add.sprite(470, 190, 'preload-cat');
+      this.load.setPreloadSprite(this.preloadCat, 1);
 
       this.load.image('menu-bg', 'assets/images/menu-bg.png');
-      this.load.image('blue-bg', 'assets/images/blue-bg.png');
       this.game.load.image('scene-bg', 'assets/images/scene-bg.png');
       this.game.load.image('lane-bg', 'assets/images/lane-bg.png');
       this.game.load.image('catSprite', 'assets/images/cat-sprite.png');
-      // Load remaining assets here
     }
 
     create() {

@@ -1,7 +1,8 @@
 module WalkyCat.State {
   export class Boot extends Phaser.State {
     preload() {
-      this.load.image('preload-bar', 'assets/images/preload-bar.png');
+      this.load.image('preload-cat', 'assets/images/preload-cat.png');
+      this.load.image('blue-bg', 'assets/images/blue-bg.png');
     }
 
     create() {
