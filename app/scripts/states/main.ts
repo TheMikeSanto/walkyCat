@@ -7,19 +7,19 @@ module WalkyCat.State {
   	lane3: WalkyCat.Lane;
 
     create() {
-      this.background = new Scene("scene-bg", this.game, 0,0);
+      this.background = new Scene("scene-bg", this.game, 0,0, false);
       this.game.add.existing(this.background);
     	
-    	this.lane1 = new Lane(this.game, 0, 400);
+    	this.lane1 = new Lane(this, 0, 400);
     	this.game.add.existing(this.lane1);
 
-    	this.lane2 = new Lane(this.game, 0, 560);
+    	this.lane2 = new Lane(this, 0, 560);
     	this.game.add.existing(this.lane2);
 
-    	this.lane3 = new Lane(this.game, 0, 720);
+    	this.lane3 = new Lane(this, 0, 720);
     	this.game.add.existing(this.lane3);
 
-    	this.cat = new Cat(this.game, 25, 500);
+    	this.cat = new Cat(this.game, 25, 400);
     	this.game.add.existing(this.cat);
 
       this.game.world.setBounds(0, 0, this.background.width * 2, this.background.height);
