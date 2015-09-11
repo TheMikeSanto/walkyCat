@@ -14,7 +14,7 @@ module WalkyCat {
 
 		constructor(game: Phaser.Game, x: number, y: number) {
 			// Call Phaser.Sprite constructor
-			super(game, x, y, "CAT_WALKING", 0);
+			super(game, x, y, "catSprite", 0);
 
 			this.game = game;
 			this.walkingSpeed = 0;
