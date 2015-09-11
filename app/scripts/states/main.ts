@@ -23,7 +23,7 @@ module WalkyCat.State {
     	this.game.add.existing(this.cat);
 
       this.game.world.setBounds(0, 0, this.background.width * 2, this.background.height);
-      this.game.camera.follow(this.cat);
+      // this.game.camera.follow(this.cat, Phaser.Camera.FOLLOW_PLATFORMER);
     }
   }
 }

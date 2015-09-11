@@ -4,9 +4,9 @@
 /// <reference path='states/preload.ts'/>
 /// <reference path='states/menu.ts'/>
 /// <reference path='states/main.ts'/>
-/// <reference path='objects/cat.ts'/>
-/// <reference path='objects/lane.ts'/>
 /// <reference path='objects/scene.ts'/>
+/// <reference path='objects/lane.ts'/>
+/// <reference path='objects/cat.ts'/>
 
 module WalkyCat {
   export class Game extends Phaser.Game {
