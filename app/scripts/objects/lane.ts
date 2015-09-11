@@ -12,7 +12,12 @@ module WalkyCat {
 		}
 
 		onClick (sprite, pointer) {
-			this.state.cat.y = this.y - this.height;
+			var offsetY = this.y - this.height;
+			this.game.add.tween(this.state.cat)
+					.to({
+							x: this.state.cat.x,
+							y: offsetY
+					}, 500, Phaser.Easing.Quadratic.InOut, true);
 		}
 	}
 }
