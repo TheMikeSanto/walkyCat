@@ -19,7 +19,7 @@ module WalkyCat.State {
     	this.game.add.existing(this.lane3);
 
     	this.cat = new Cat(this.game, 25, 500);
-    	this.game.add.existing(this.player);
+    	this.game.add.existing(this.cat);
     }
   }
 }
