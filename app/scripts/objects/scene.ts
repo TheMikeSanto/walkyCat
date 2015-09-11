@@ -6,15 +6,24 @@ module WalkyCat {
 
 		constructor(bg: string, game: Phaser.Game, x: number, y: number, inputEnabled: boolean) {
 			super(game, x, y, bg, 0);
-			this.nextFrame = new Phaser.Sprite(this.game, this.x + this.width, this.y, bg, 0);
+			this.game = game;
+			this.walkingSpeed = 1;
+
+			var offsetX = this.x + this.width;
+			var offsetY = y;
+
+			if (offsetY != 0) {
+				offsetY = this.y - this.height;
+			}
+
+			this.nextFrame = new Phaser.Sprite(this.game, offsetX, offsetY, bg, 0);
+
 			if (inputEnabled) {
 				this.inputEnabled = true;
 				this.nextFrame.inputEnabled = true;
 			}
+			
 			this.game.add.existing(this.nextFrame);
-
-			this.game = game;
-			this.walkingSpeed = 1;
 		}
 
 		update() {
