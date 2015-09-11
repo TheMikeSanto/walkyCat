@@ -1,0 +1,1 @@
+rsync -avr --exclude '.git' /Users/mike/projects/walky/walkyCat/build/ root@guildmedia.co:/var/www/guildmedia.co/html/walky/
