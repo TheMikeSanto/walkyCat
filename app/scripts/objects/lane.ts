@@ -17,7 +17,7 @@ module WalkyCat {
 					.to({
 							x: this.state.cat.x,
 							y: offsetY
-					}, 500, Phaser.Easing.Quadratic.InOut, true);
+					}, 200, Phaser.Easing.Quadratic.InOut, true);
 		}
 	}
 }
