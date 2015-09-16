@@ -1,5 +1,6 @@
 /// <reference path="../vendor/phaser-official/typescript/phaser.d.ts"/>
 
+/// <reference path='utils.ts'/>
 /// <reference path='states/boot.ts'/>
 /// <reference path='states/preload.ts'/>
 /// <reference path='states/menu.ts'/>
@@ -11,8 +12,7 @@
 module WalkyCat {
   export class Game extends Phaser.Game {
     constructor() {
-      super(1280, 720, Phaser.AUTO, 'game-div');
-
+      super(1280, 720, Phaser.AUTO, 'game-content');
       this.state.add('boot', State.Boot);
       this.state.add('preload', State.Preload);
       this.state.add('menu', State.Menu);
