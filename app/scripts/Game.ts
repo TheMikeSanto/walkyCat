@@ -8,11 +8,13 @@
 /// <reference path='objects/scene.ts'/>
 /// <reference path='objects/lane.ts'/>
 /// <reference path='objects/cat.ts'/>
+/// <reference path='objects/colliders/collider.ts'/>
+/// <reference path='objects/colliders/bomb.ts'/>
 
 module WalkyCat {
   export class Game extends Phaser.Game {
     constructor() {
-      super(1280, 720, Phaser.CANVAS, 'game-content');
+      super(1280, 720, Phaser.CANVAS, 'game-content');      
       this.state.add('boot', State.Boot);
       this.state.add('preload', State.Preload);
       this.state.add('menu', State.Menu);

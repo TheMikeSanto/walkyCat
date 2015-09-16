@@ -12,7 +12,8 @@ module WalkyCat {
 		}
 
 		onClick (sprite, pointer) {
-			var offsetY = this.y - this.height;
+			var offsetY = this.y - this.height + 75;
+			this.state.cat.body.reset(this.state.cat.x, offsetY);
 			this.game.add.tween(this.state.cat)
 					.to({
 							x: this.state.cat.x,
