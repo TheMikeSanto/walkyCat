@@ -16,7 +16,7 @@ module WalkyCat.State {
       this.game.stage.disableVisibilityChange = true;
       this.game.input.maxPointers = 1;
       this.game.scale.setResizeCallback(function() {
-        Utils.resize(this.parentElement, this, true);
+        Utils.resize(this.parentElement, this);
       }, this)
       this.game.stage.backgroundColor = 0x000000;
 
