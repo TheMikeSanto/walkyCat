@@ -51,7 +51,7 @@ module WalkyCat.State {
       this.game.physics.p2.enable(bomb, false);
       bomb.body.setCollisionGroup(this.colliderCG);
       bomb.body.collides(this.catCG, function() {
-        this.game.state.start('menu');
+        this.game.state.start('gameOver');
       }, this);
     }
   }
