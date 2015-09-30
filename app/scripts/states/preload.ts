@@ -9,6 +9,7 @@ module WalkyCat.State {
       this.load.setPreloadSprite(this.preloadCat, 1);
 
       this.load.image('menu-bg', 'assets/images/menu-bg.png');
+      this.load.image('game-over-bg', 'assets/images/game-over-bg.png');
       this.game.load.image('scene-bg', 'assets/images/scene-bg.png');
       this.game.load.image('lane-bg', 'assets/images/lane-bg.png');
       this.game.load.image('cat-sprite', 'assets/images/cat-sprite.png');
