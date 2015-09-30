@@ -9,7 +9,7 @@ module WalkyCat {
 		}
 
 		update() {
-			this.body.moveLeft(300);
+			this.body.moveLeft(325);
 		}
 	}
 }

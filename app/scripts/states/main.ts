@@ -29,13 +29,13 @@ module WalkyCat.State {
     	this.lane3 = new Lane(this, 0, 720);
     	this.game.add.existing(this.lane3);
 
-    	this.cat = new Cat(this.game, 100, 475);
+    	this.cat = new Cat(this.game, 200, 475);
     	this.game.add.existing(this.cat);
       this.game.physics.p2.enable(this.cat);
       this.cat.body.setCollisionGroup(this.catCG);
       this.cat.body.collides(this.colliderCG);
 
-      this.game.time.events.loop(Phaser.Timer.SECOND * 1.5, this.addCollider, this);
+      this.game.time.events.loop(Phaser.Timer.SECOND, this.addCollider, this);
 
       this.game.world.setBounds(0, 0, this.background.width * 2, this.background.height);
       // this.game.camera.follow(this.cat, Phaser.Camera.FOLLOW_PLATFORMER);
