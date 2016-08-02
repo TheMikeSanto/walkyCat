@@ -14,8 +14,10 @@
 
 module WalkyCat {
   export class Game extends Phaser.Game {
+    static walkingSpeed: number;
+
     constructor() {
-      super(1280, 720, Phaser.CANVAS, 'game-content');      
+      super(960, 640, Phaser.CANVAS, 'game-content');      
       this.state.add('boot', State.Boot);
       this.state.add('preload', State.Preload);
       this.state.add('menu', State.Menu);
@@ -23,6 +25,7 @@ module WalkyCat {
       this.state.add('gameOver', State.GameOver);
 
       this.state.start('boot');
+      Game.walkingSpeed = 1.5;
     }
   }
 }

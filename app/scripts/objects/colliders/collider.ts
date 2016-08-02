@@ -9,7 +9,7 @@ module WalkyCat {
 		}
 
 		update() {
-			this.body.moveLeft(325);
+			this.body.moveLeft(Game.walkingSpeed * 216);
 		}
 	}
 }

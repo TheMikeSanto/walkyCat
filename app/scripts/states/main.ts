@@ -35,7 +35,10 @@ module WalkyCat.State {
       this.cat.body.setCollisionGroup(this.catCG);
       this.cat.body.collides(this.colliderCG);
 
-      this.game.time.events.loop(Phaser.Timer.SECOND, this.addCollider, this);
+      var colliderRate = Phaser.Timer.SECOND / Game.walkingSpeed + 333;
+      console.log(colliderRate);
+
+      this.game.time.events.loop(colliderRate, this.addCollider, this);
 
       this.game.world.setBounds(0, 0, this.background.width * 2, this.background.height);
       // this.game.camera.follow(this.cat, Phaser.Camera.FOLLOW_PLATFORMER);
